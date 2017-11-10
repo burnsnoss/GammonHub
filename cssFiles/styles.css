@@ -1,0 +1,41 @@
+body {
+	margin: 			0 auto;
+}
+
+#container {
+	height: 			100%;
+	width: 				100%;
+}
+
+#boardContainer {
+	height: 			440px;
+	width: 				748px;
+	background-color: 	#BF9C42;
+	border: 			30px solid #722F02;
+}
+
+#boardCenterDivider {
+	height: 			100%;
+	width: 				40px;
+	background-color: 	#722F02;
+}
+
+.whiteTriangle {
+	width: 59px;
+	height: 75px;
+	background-color: #FFFFFF;
+}
+/*#boardOutline {
+	height: 			100%;
+	width: 				100%;
+	background-color:	#722F02;
+}
+
+#boardBackground {
+	height: 			100%;
+	width:				100%
+	background-color: 	#BF9C42;
+	padding-top: 		30px;
+}
+*/
+
