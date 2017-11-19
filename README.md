@@ -12,6 +12,7 @@ the ambitious plan is to implement a backgammon AI.
 
 Backlog:
  - Create move validation and gameplay
+ - Do starter dice roll correctly
  - Create player 2 game board view for command line
  - Create ability to customize pieces/names
  - Install jQueryUI
