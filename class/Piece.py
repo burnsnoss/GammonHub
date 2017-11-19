@@ -11,7 +11,7 @@ class Piece:
 		if self.color == 'w':
 			return 'O'
 		else:
-			return 'X'
+			return '0'
 
 	# def changePiece(self, newChar, color):
 	# 	if color == 'b':
