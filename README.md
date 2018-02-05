@@ -16,6 +16,8 @@ Backlog:
  - Create player 2 game board view for command line
  - Create ability to customize pieces/names
  - Install jQueryUI
+ 	- Maybe get an already existing gammon UI?
+ - Collapse classes into proper heirarchy/inheritance 
  - Create board/web classes
  - Create web game mechanisms
  - Connect python turn mechanism to web frontend

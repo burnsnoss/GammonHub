@@ -51,3 +51,6 @@ def getColor():
 			print " "
 			print "     - P L E A S E   I N P U T   b   O R   w - "
 			print " "
+
+def logError(errorType, msg):
+	pass # if 

@@ -2,6 +2,7 @@ import Board
 import Turn
 import Dice
 import Util
+import Move
 
 
 def validateMove(move):
@@ -14,7 +15,7 @@ def startOnePlayerGame(color):
 def startTwoPlayerGame(color):
 	board = Board.Board(color)
 	dice = Dice.Dice()
-	
+
 	board.printBoard()
 
 	print 'Determining Starter...'
@@ -34,6 +35,17 @@ def startTwoPlayerGame(color):
 
 		turn.setRolls(dice.roll())
 		print turn.printRoll()
+
+		# Get and validate move from the player
+		move = Move.getPlayerMove(turn, board)
+
+		# Make the move
+		if move == 'undo':
+			board.undoMove(turn)
+			turn.undoMove()
+		else:
+			pass
+			
 
 		break
 

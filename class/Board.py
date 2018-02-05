@@ -124,7 +124,6 @@ class Board:
 
 		for i in range(1,25):
 			pcs = self.board[i].getPieces()
-			print self.board[i]
 			row, col = self.pointPrintCoords[i]
 		
 			numPcs = 0
@@ -160,3 +159,36 @@ class Board:
 				printLine += char
 			print printLine
 			printLine = ''
+
+		print ' '
+
+
+	def validateMove(self, move, turn):
+		''' 
+			Checks to see if the move is an ok move to make on the board 
+
+			Error cases:
+			 - There is no piece in the provided point
+		 	 - The initial point contains the opposite players pieces
+		 	 - The destination point contains two or more of the opposite players pieces
+			 > Given the piece is in the first quadrant:
+			 	> Given the user is trying to remove the piece:
+			 		- There are pieces outside of this quadrant
+			 		- The value of the move is greater than the point position 
+			 		   AND the point is not the outermost point from the bank
+		'''
+
+		direction = turn.getDirection()
+		player = turn.getTurn()
+
+		initialPoint = self.board[move[0]]
+
+		if direction == 'anti':
+			destinationPoint = self.board[move[0] - move[1]]
+		else: 
+			destinationPoint = self.board[move[0] + move[1]]
+
+		# initialPieces = 
+
+
+		return True

@@ -7,6 +7,7 @@ class Turn:
 	movesMade = []
 	turn = ''
 	turnPrint = ''
+	turnCount = 0
 	direction = ''
 
 	def __init__(self, starter, homeColor):
@@ -35,6 +36,9 @@ class Turn:
 	def getTurnPrint(self):
 		return self.turnPrint
 
+	def getTurn(self):
+		return self.turn
+
 	def setRolls(self, newRolls):
 		self.movesMade = []
 		self.rolls = newRolls
@@ -54,17 +58,20 @@ class Turn:
 			msg += str(roll) + ' '
 		return msg
 
+	def getDirection(self):
+		return self.direction 
+
 	def nextTurn(self):
 		if self.turn == 'b':
 			self.turn = 'w'
-			self.turnPrint = 'White'
 		else:
 			self.turn = 'b'
-			self.turnPrint = 'Black'
 
 		if self.direction == 'anti':
 			self.direction = 'clock'
 		else:
 			self.direction = 'anti'
+
+		self.setTurnPrint()
 
 		return self.turn
